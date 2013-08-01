@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		418F882E170549A600D84E03 /* small_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F882C170549A600D84E03 /* small_icon.png */; };
+		418F882F170549A600D84E03 /* Welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 418F882D170549A600D84E03 /* Welcome.jpg */; };
+		418F8832170549D600D84E03 /* ImgEnhancer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 418F8830170549D600D84E03 /* ImgEnhancer.cpp */; };
+		418F883417054A1D00D84E03 /* small_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F883317054A1D00D84E03 /* small_icon.png */; };
 		418F8E1C16AB75C500E7E63C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E1B16AB75C500E7E63C /* UIKit.framework */; };
 		418F8E1E16AB75C500E7E63C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E1D16AB75C500E7E63C /* Foundation.framework */; };
 		418F8E2016AB75C500E7E63C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E1F16AB75C500E7E63C /* CoreGraphics.framework */; };
@@ -17,8 +21,7 @@
 		418F8E3016AB75C500E7E63C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F8E2F16AB75C500E7E63C /* Default@2x.png */; };
 		418F8E3216AB75C500E7E63C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 418F8E3116AB75C500E7E63C /* Default-568h@2x.png */; };
 		418F8E3516AB75C500E7E63C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418F8E3316AB75C500E7E63C /* MainStoryboard.storyboard */; };
-		418F8E3816AB75C500E7E63C /* vsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 418F8E3716AB75C500E7E63C /* vsViewController.mm */; };
-		418F8E3F16AB75E700E7E63C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E3E16AB75E700E7E63C /* opencv2.framework */; };
+		418F8E3816AB75C500E7E63C /* vsVideoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 418F8E3716AB75C500E7E63C /* vsVideoViewController.mm */; };
 		418F8E4416AB810000E7E63C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E4316AB810000E7E63C /* AVFoundation.framework */; };
 		418F8E4616AB815100E7E63C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E4516AB815100E7E63C /* QuartzCore.framework */; };
 		418F8E4816AB817B00E7E63C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E4716AB817A00E7E63C /* CoreImage.framework */; };
@@ -27,11 +30,24 @@
 		418F8E4E16AB81A900E7E63C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E4D16AB81A900E7E63C /* CoreVideo.framework */; };
 		418F8E5016AB81BD00E7E63C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E4F16AB81BD00E7E63C /* Accelerate.framework */; };
 		418F8E5216AB81D100E7E63C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F8E5116AB81D100E7E63C /* AssetsLibrary.framework */; };
-		4196797E1700D48A006471EA /* ImgEnhancer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4196797C1700D48A006471EA /* ImgEnhancer.cpp */; };
+		41A11ED817AA1C410043F11E /* vsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A11ED717AA1C410043F11E /* vsNavigationController.m */; };
+		41A7CC3D17A63693008BFCFA /* vsMainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 41A7CC3C17A63693008BFCFA /* vsMainViewController.mm */; };
+		41A7CC4017A63FFA008BFCFA /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A7CC3E17A63EB6008BFCFA /* opencv2.framework */; };
+		41AF3C4D17A6048C008499A9 /* vsPhotoViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 41AF3C4C17A6048C008499A9 /* vsPhotoViewController.mm */; };
+		41AF3C4F17A6066C008499A9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AF3C4E17A6066C008499A9 /* iAd.framework */; };
+		41AF3C5317A60925008499A9 /* sherlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF3C5217A60925008499A9 /* sherlock.png */; };
+		41BEE01C17A8E1670068F503 /* dark-eye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41BEE01B17A8E1660068F503 /* dark-eye.jpg */; };
+		41BEE01E17A8E46C0068F503 /* light_shining1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41BEE01D17A8E46C0068F503 /* light_shining1.jpg */; };
+		41BEE02217A8E8800068F503 /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BEE02117A8E8800068F503 /* icon57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		418F8E1716AB75C500E7E63C /* ImageDenighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDenighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		418F882C170549A600D84E03 /* small_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_icon.png; sourceTree = "<group>"; };
+		418F882D170549A600D84E03 /* Welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Welcome.jpg; sourceTree = "<group>"; };
+		418F8830170549D600D84E03 /* ImgEnhancer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImgEnhancer.cpp; sourceTree = "<group>"; };
+		418F8831170549D600D84E03 /* ImgEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgEnhancer.h; sourceTree = "<group>"; };
+		418F883317054A1D00D84E03 /* small_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = small_icon.png; path = ../../small_icon.png; sourceTree = "<group>"; };
+		418F8E1716AB75C500E7E63C /* Denighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Denighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418F8E1B16AB75C500E7E63C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		418F8E1D16AB75C500E7E63C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		418F8E1F16AB75C500E7E63C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,9 +61,8 @@
 		418F8E2F16AB75C500E7E63C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		418F8E3116AB75C500E7E63C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		418F8E3416AB75C500E7E63C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		418F8E3616AB75C500E7E63C /* vsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vsViewController.h; sourceTree = "<group>"; };
-		418F8E3716AB75C500E7E63C /* vsViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = vsViewController.mm; sourceTree = "<group>"; };
-		418F8E3E16AB75E700E7E63C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../libs/opencv2.framework; sourceTree = "<group>"; };
+		418F8E3616AB75C500E7E63C /* vsVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vsVideoViewController.h; sourceTree = "<group>"; };
+		418F8E3716AB75C500E7E63C /* vsVideoViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = vsVideoViewController.mm; sourceTree = "<group>"; };
 		418F8E4316AB810000E7E63C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		418F8E4516AB815100E7E63C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		418F8E4716AB817A00E7E63C /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -56,8 +71,18 @@
 		418F8E4D16AB81A900E7E63C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		418F8E4F16AB81BD00E7E63C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		418F8E5116AB81D100E7E63C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		4196797C1700D48A006471EA /* ImgEnhancer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImgEnhancer.cpp; sourceTree = "<group>"; };
-		4196797D1700D48A006471EA /* ImgEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgEnhancer.h; sourceTree = "<group>"; };
+		41A11ED617AA1C410043F11E /* vsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsNavigationController.h; sourceTree = "<group>"; };
+		41A11ED717AA1C410043F11E /* vsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vsNavigationController.m; sourceTree = "<group>"; };
+		41A7CC3B17A63693008BFCFA /* vsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsMainViewController.h; sourceTree = "<group>"; };
+		41A7CC3C17A63693008BFCFA /* vsMainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vsMainViewController.mm; sourceTree = "<group>"; };
+		41A7CC3E17A63EB6008BFCFA /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../libs/opencv246/opencv2.framework; sourceTree = "<group>"; };
+		41AF3C4B17A6048C008499A9 /* vsPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsPhotoViewController.h; sourceTree = "<group>"; };
+		41AF3C4C17A6048C008499A9 /* vsPhotoViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = vsPhotoViewController.mm; sourceTree = "<group>"; };
+		41AF3C4E17A6066C008499A9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		41AF3C5217A60925008499A9 /* sherlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sherlock.png; sourceTree = "<group>"; };
+		41BEE01B17A8E1660068F503 /* dark-eye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dark-eye.jpg"; sourceTree = "<group>"; };
+		41BEE01D17A8E46C0068F503 /* light_shining1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = light_shining1.jpg; sourceTree = "<group>"; };
+		41BEE02117A8E8800068F503 /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon57.png; path = ../../icon57.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A7CC4017A63FFA008BFCFA /* opencv2.framework in Frameworks */,
+				41AF3C4F17A6066C008499A9 /* iAd.framework in Frameworks */,
 				418F8E5216AB81D100E7E63C /* AssetsLibrary.framework in Frameworks */,
 				418F8E5016AB81BD00E7E63C /* Accelerate.framework in Frameworks */,
 				418F8E4E16AB81A900E7E63C /* CoreVideo.framework in Frameworks */,
@@ -73,7 +100,6 @@
 				418F8E4816AB817B00E7E63C /* CoreImage.framework in Frameworks */,
 				418F8E4616AB815100E7E63C /* QuartzCore.framework in Frameworks */,
 				418F8E4416AB810000E7E63C /* AVFoundation.framework in Frameworks */,
-				418F8E3F16AB75E700E7E63C /* opencv2.framework in Frameworks */,
 				418F8E1C16AB75C500E7E63C /* UIKit.framework in Frameworks */,
 				418F8E1E16AB75C500E7E63C /* Foundation.framework in Frameworks */,
 				418F8E2016AB75C500E7E63C /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +109,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		418F882B170549A600D84E03 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				41BEE02117A8E8800068F503 /* icon57.png */,
+				41BEE01D17A8E46C0068F503 /* light_shining1.jpg */,
+				41BEE01B17A8E1660068F503 /* dark-eye.jpg */,
+				418F883317054A1D00D84E03 /* small_icon.png */,
+				41AF3C5217A60925008499A9 /* sherlock.png */,
+				418F882C170549A600D84E03 /* small_icon.png */,
+				418F882D170549A600D84E03 /* Welcome.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		418F8E0C16AB75C500E7E63C = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +135,7 @@
 		418F8E1816AB75C500E7E63C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				418F8E1716AB75C500E7E63C /* ImageDenighter.app */,
+				418F8E1716AB75C500E7E63C /* Denighter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +143,8 @@
 		418F8E1A16AB75C500E7E63C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41A7CC3E17A63EB6008BFCFA /* opencv2.framework */,
+				41AF3C4E17A6066C008499A9 /* iAd.framework */,
 				418F8E5116AB81D100E7E63C /* AssetsLibrary.framework */,
 				418F8E4F16AB81BD00E7E63C /* Accelerate.framework */,
 				418F8E4D16AB81A900E7E63C /* CoreVideo.framework */,
@@ -111,7 +153,6 @@
 				418F8E4516AB815100E7E63C /* QuartzCore.framework */,
 				418F8E4B16AB818C00E7E63C /* MobileCoreServices.framework */,
 				418F8E4316AB810000E7E63C /* AVFoundation.framework */,
-				418F8E3E16AB75E700E7E63C /* opencv2.framework */,
 				418F8E1B16AB75C500E7E63C /* UIKit.framework */,
 				418F8E1D16AB75C500E7E63C /* Foundation.framework */,
 				418F8E1F16AB75C500E7E63C /* CoreGraphics.framework */,
@@ -122,13 +163,20 @@
 		418F8E2116AB75C500E7E63C /* ImageDenighter */ = {
 			isa = PBXGroup;
 			children = (
-				4196797C1700D48A006471EA /* ImgEnhancer.cpp */,
-				4196797D1700D48A006471EA /* ImgEnhancer.h */,
+				41A11ED617AA1C410043F11E /* vsNavigationController.h */,
+				41A11ED717AA1C410043F11E /* vsNavigationController.m */,
+				41A7CC3B17A63693008BFCFA /* vsMainViewController.h */,
+				41A7CC3C17A63693008BFCFA /* vsMainViewController.mm */,
+				418F8830170549D600D84E03 /* ImgEnhancer.cpp */,
+				418F8831170549D600D84E03 /* ImgEnhancer.h */,
 				418F8E2A16AB75C500E7E63C /* vsAppDelegate.h */,
 				418F8E2B16AB75C500E7E63C /* vsAppDelegate.m */,
 				418F8E3316AB75C500E7E63C /* MainStoryboard.storyboard */,
-				418F8E3616AB75C500E7E63C /* vsViewController.h */,
-				418F8E3716AB75C500E7E63C /* vsViewController.mm */,
+				418F8E3616AB75C500E7E63C /* vsVideoViewController.h */,
+				418F8E3716AB75C500E7E63C /* vsVideoViewController.mm */,
+				41AF3C4B17A6048C008499A9 /* vsPhotoViewController.h */,
+				41AF3C4C17A6048C008499A9 /* vsPhotoViewController.mm */,
+				418F882B170549A600D84E03 /* Images */,
 				418F8E2216AB75C500E7E63C /* Supporting Files */,
 			);
 			path = ImageDenighter;
@@ -165,7 +213,7 @@
 			);
 			name = ImageDenighter;
 			productName = ImageDenighter;
-			productReference = 418F8E1716AB75C500E7E63C /* ImageDenighter.app */;
+			productReference = 418F8E1716AB75C500E7E63C /* Denighter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,6 +253,13 @@
 				418F8E3016AB75C500E7E63C /* Default@2x.png in Resources */,
 				418F8E3216AB75C500E7E63C /* Default-568h@2x.png in Resources */,
 				418F8E3516AB75C500E7E63C /* MainStoryboard.storyboard in Resources */,
+				418F882E170549A600D84E03 /* small_icon.png in Resources */,
+				418F882F170549A600D84E03 /* Welcome.jpg in Resources */,
+				418F883417054A1D00D84E03 /* small_icon.png in Resources */,
+				41AF3C5317A60925008499A9 /* sherlock.png in Resources */,
+				41BEE01C17A8E1670068F503 /* dark-eye.jpg in Resources */,
+				41BEE01E17A8E46C0068F503 /* light_shining1.jpg in Resources */,
+				41BEE02217A8E8800068F503 /* icon57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +272,11 @@
 			files = (
 				418F8E2816AB75C500E7E63C /* main.m in Sources */,
 				418F8E2C16AB75C500E7E63C /* vsAppDelegate.m in Sources */,
-				418F8E3816AB75C500E7E63C /* vsViewController.mm in Sources */,
-				4196797E1700D48A006471EA /* ImgEnhancer.cpp in Sources */,
+				418F8E3816AB75C500E7E63C /* vsVideoViewController.mm in Sources */,
+				418F8832170549D600D84E03 /* ImgEnhancer.cpp in Sources */,
+				41AF3C4D17A6048C008499A9 /* vsPhotoViewController.mm in Sources */,
+				41A7CC3D17A63693008BFCFA /* vsMainViewController.mm in Sources */,
+				41A11ED817AA1C410043F11E /* vsNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +324,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -287,7 +345,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -302,12 +360,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../libs\"",
+					"\"$(SRCROOT)/../../../libs/opencv246\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageDenighter/ImageDenighter-Prefix.pch";
 				INFOPLIST_FILE = "ImageDenighter/ImageDenighter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = Denighter;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -317,15 +376,18 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../libs\"",
+					"\"$(SRCROOT)/../../../libs/opencv246\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageDenighter/ImageDenighter-Prefix.pch";
 				INFOPLIST_FILE = "ImageDenighter/ImageDenighter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = Denighter;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -3,19 +3,15 @@
 
 ImgEnhancer::ImgEnhancer(void)
 {
-	c[0] = 80;
-	c[1] = 120;
-	c[2] = 250;	//scale parameters
+	//scale parameters
+	c[0] = 15; //80;
+	c[1] = 81; //120;
+	c[2] = 251;	
 
 	alpha = 125, beta = 46;
 	G = 192, b = -30;
-    
-    ifInit = false;
-}
 
-
-ImgEnhancer::~ImgEnhancer(void)
-{
+	ifInit = false;
 }
 
 
@@ -162,7 +158,7 @@ bool ImgEnhancer::GenerateGaussianKernels(int imgw, int imgh)
 			for(int k=0; k<gaussKernels[i].cols; k++)
 			{
 				double x = k - center.x;
-				double val = exp(-(x*x+y*y)/(2*c[i]*c[i]));
+				double val = exp(-(x*x+y*y)/(c[i]*c[i]));
 				gaussKernels[i].at<float>(j, k) = val;
 				sum += val;
 			}
@@ -170,7 +166,6 @@ bool ImgEnhancer::GenerateGaussianKernels(int imgw, int imgh)
 		
 		//normalize
 		gaussKernels[i] /= sum;
-		//gaussKernels[i].convertTo(gaussKernels[i], gaussKernels[i].depth(), sum);
 	}
 
 	return true;
@@ -178,11 +173,11 @@ bool ImgEnhancer::GenerateGaussianKernels(int imgw, int imgh)
 
 bool ImgEnhancer::Init(const Mat& img)
 {
-    GenerateGaussianKernels(img.cols, img.rows);
-    
-    ifInit = true;
-    
-    return true;
+	GenerateGaussianKernels(img.cols, img.rows);
+	
+	ifInit = true;
+
+	return true;
 }
 
 bool ImgEnhancer::MSRCR(const Mat& img, Mat& output)
@@ -191,11 +186,17 @@ bool ImgEnhancer::MSRCR(const Mat& img, Mat& output)
 		return false;
 
 	// resize
-	/*Mat new_img;
-	resize(img, new_img, Size(img.cols, img.rows));*/
+	Mat new_img = img.clone();
+	//resize(img, new_img, Size(img.cols, img.rows));
 
-	Mat dimg(img.rows, img.cols, CV_32FC3);
-	img.convertTo(dimg, dimg.type());
+	// sharpening
+	Mat blur = img.clone();
+	cv::GaussianBlur(img, blur, cv::Size(0, 0), 3);
+	cv::addWeighted(img, 1.5, blur, -0.5, 0, new_img);
+	
+	// do processing
+	Mat dimg(new_img.rows, new_img.cols, CV_32FC3);
+	new_img.convertTo(dimg, dimg.type());
 	//split to 3 channels
 	vector<Mat> channels(3);
 	split(dimg, channels);	// bgr
@@ -205,9 +206,9 @@ bool ImgEnhancer::MSRCR(const Mat& img, Mat& output)
 	//////////////////////////////////////////////////////////////////////////
 	vector<Mat> scales(3);
 	for(int i=0; i<3; i++)
-		scales[i].create(img.rows, img.cols, CV_32F);
+		scales[i].create(dimg.rows, dimg.cols, CV_32F);
 
-	Mat logimg1(img.rows, img.cols, CV_32F);
+	Mat logimg1(dimg.rows, dimg.cols, CV_32F);
 	Mat logimg2 = logimg1.clone();
 	
 	Mat channelSum = logimg1.clone();
@@ -241,15 +242,17 @@ bool ImgEnhancer::MSRCR(const Mat& img, Mat& output)
 			// cvFFTConvolution(channels[i], gaussKernels[j], scales[j]);
 			//scales[j] += 1.0;
 
+			// do gaussian kernel convolution
+			/*GaussianBlur(channels[i], scales[j], cv::Size(c[j], c[j]), 0, 0);
+			scales[j] += 1;*/
+			
 			scales[j].setTo(1);
 			log(scales[j], scales[j]);
 			scales[j] = logimg1 - scales[j];
 		}
 
 		//combine multiscale
-		//channels[i].setTo(0);
 		channels[i] = (scales[0] + scales[1] + scales[2]) / 3;
-		//channels[i] *= 1.0/3;
 		
 		//multiply CRC
 		channels[i] = colorrestore.mul(channels[i]);
@@ -282,6 +285,17 @@ bool ImgEnhancer::MSRCR(const Mat& img, Mat& output)
 
 	output = img.clone();
 	bilateralFilter ( result, output, 11, 2*11, 11/2 );
+    
+    //medianBlur(output, output, 3);
+	//imshow("bilateral1", output);
+	/*Mat back = output.clone();
+	bilateralFilter ( output, back, 11, 2*11, 11/2 );
+	imshow("bilateral2", back);*/
+	
+	//medianBlur(result, output, 3);
+	//imshow("Median", output);
+
+	//waitKey(0);
 
 	return true;
 }

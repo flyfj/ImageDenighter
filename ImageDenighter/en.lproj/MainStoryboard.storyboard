@@ -1,64 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mJs-T8-f5o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mJs-T8-f5o">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Vs View Controller - NightVision-->
+        <!--Vs Video View Controller - Video View-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="vsViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="vsVideoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtJ-3a-oge">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="440" id="nbd-kk-F1C"/>
-                                </constraints>
                             </imageView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6im-oR-LKw">
-                                <connections>
-                                    <action selector="videoSwitchChanged:" destination="2" eventType="valueChanged" id="5fA-iS-zsD"/>
-                                </connections>
-                            </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nVk-ej-Hfs">
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-6Y-Dso">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="161" id="GJY-Ok-RgU"/>
+                                    <constraint firstAttribute="height" constant="50" id="H5B-xp-44E"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="Normal"/>
-                                    <segment title="Denight"/>
-                                </segments>
-                            </segmentedControl>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="LfQ-yU-nir"/>
+                                </connections>
+                            </adBannerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50x-Bg-dFS">
+                                <items>
+                                    <barButtonItem systemItem="camera" id="VPw-i9-Vfj">
+                                        <connections>
+                                            <action selector="cameraBtnPressed:" destination="2" id="9mU-j3-wBp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" systemItem="save" id="uaa-dl-Mfj">
+                                        <connections>
+                                            <action selector="saveBtnPressed:" destination="2" id="Zwz-Bd-iaK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="47a-ac-Fkc"/>
+                                    <barButtonItem style="plain" id="2F4-Vg-rqK">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="nVk-ej-Hfs">
+                                            <rect key="frame" x="194" y="1" width="120" height="44"/>
+                                            <segments>
+                                                <segment title="Off"/>
+                                                <segment title="On"/>
+                                            </segments>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tWB-6Y-Dso" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="4eu-1p-jGc"/>
                             <constraint firstItem="gtJ-3a-oge" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="65W-eG-6XL"/>
-                            <constraint firstAttribute="bottom" secondItem="nVk-ej-Hfs" secondAttribute="bottom" constant="9" id="8S5-bq-DZA"/>
-                            <constraint firstItem="6im-oR-LKw" firstAttribute="centerY" secondItem="nVk-ej-Hfs" secondAttribute="centerY" type="default" id="CPS-Gl-R3m"/>
+                            <constraint firstItem="50x-Bg-dFS" firstAttribute="top" secondItem="gtJ-3a-oge" secondAttribute="bottom" type="default" id="Dj2-fZ-Yll"/>
+                            <constraint firstItem="50x-Bg-dFS" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="IjR-YN-gAZ"/>
                             <constraint firstItem="gtJ-3a-oge" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Obl-DQ-sHu"/>
-                            <constraint firstItem="nVk-ej-Hfs" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="146" id="U7a-Zk-36G"/>
-                            <constraint firstItem="6im-oR-LKw" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="28" id="Viq-AA-qD8"/>
+                            <constraint firstItem="50x-Bg-dFS" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="aVN-0d-xoG"/>
+                            <constraint firstItem="tWB-6Y-Dso" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="iXj-nM-a1s"/>
+                            <constraint firstItem="50x-Bg-dFS" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="rlr-ve-lRt"/>
+                            <constraint firstItem="tWB-6Y-Dso" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tMZ-X1-TNO"/>
                             <constraint firstItem="gtJ-3a-oge" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="zbz-pW-5Rn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NightVision" id="e7E-Rh-7Bl"/>
+                    <navigationItem key="navigationItem" title="Video View" id="e7E-Rh-7Bl">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="6rE-pg-CTT"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="adBanner" destination="tWB-6Y-Dso" id="rUA-73-4hB"/>
                         <outlet property="captureImgViewer" destination="gtJ-3a-oge" id="uPW-mT-Dc3"/>
+                        <outlet property="contentView" destination="3" id="4nN-EH-SqR"/>
                         <outlet property="modeSelector" destination="nVk-ej-Hfs" id="DhL-gE-rod"/>
-                        <outlet property="videoSwitcher" destination="6im-oR-LKw" id="Grw-pb-1jg"/>
+                        <outlet property="saveBtn" destination="uaa-dl-Mfj" id="e1a-ws-AQa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="-113"/>
+            <point key="canvasLocation" x="941" y="477"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Vs Navigation Controller-->
         <scene sceneID="qhV-ze-weY">
             <objects>
-                <navigationController id="mJs-T8-f5o" sceneMemberID="viewController">
+                <navigationController id="mJs-T8-f5o" customClass="vsNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rWk-Do-qnZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -66,14 +88,167 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="wvL-k8-Zbd"/>
+                        <segue destination="vbc-Uy-B4y" kind="relationship" relationship="rootViewController" id="PS7-a4-3f4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LvP-OP-em0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226" y="-113"/>
+            <point key="canvasLocation" x="4" y="-81"/>
+        </scene>
+        <!--Vs Main View Controller - Dartinex-->
+        <scene sceneID="BIQ-pt-iXX">
+            <objects>
+                <viewController id="vbc-Uy-B4y" customClass="vsMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u2g-cn-1Yh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLh-uP-eKk">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ar1-6q-yDB"/>
+                                    <barButtonItem title="Video" id="pWr-IU-dtC">
+                                        <connections>
+                                            <segue destination="2" kind="push" id="JYL-hT-qiD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vPu-ug-BY7"/>
+                                    <barButtonItem title="Photo" id="yaF-m3-mp4">
+                                        <connections>
+                                            <segue destination="fpZ-ka-xNF" kind="push" id="yYI-8w-dx3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X9l-9Q-R2u"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="dark-eye.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fO0-zE-d0g">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="C2B-FU-QlD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fO0-zE-d0g" firstAttribute="top" secondItem="u2g-cn-1Yh" secondAttribute="top" constant="-37" id="38T-uR-TiE"/>
+                            <constraint firstItem="DLh-uP-eKk" firstAttribute="leading" secondItem="u2g-cn-1Yh" secondAttribute="leading" type="default" id="4h9-AK-rcb"/>
+                            <constraint firstItem="DLh-uP-eKk" firstAttribute="trailing" secondItem="u2g-cn-1Yh" secondAttribute="trailing" type="default" id="F4y-Ew-RHB"/>
+                            <constraint firstItem="fO0-zE-d0g" firstAttribute="leading" secondItem="u2g-cn-1Yh" secondAttribute="leading" type="default" id="WqD-iz-Q1B"/>
+                            <constraint firstItem="DLh-uP-eKk" firstAttribute="bottom" secondItem="u2g-cn-1Yh" secondAttribute="bottom" type="default" id="o0Y-hq-sbE"/>
+                            <constraint firstItem="fO0-zE-d0g" firstAttribute="trailing" secondItem="u2g-cn-1Yh" secondAttribute="trailing" type="default" id="zgI-9i-ipe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dartinex" id="vAV-0E-fvy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzd-uJ-NZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="-70"/>
+        </scene>
+        <!--Vs Photo View Controller - Photo View-->
+        <scene sceneID="sea-sI-THX">
+            <objects>
+                <viewController id="fpZ-ka-xNF" customClass="vsPhotoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zvc-gg-6zV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfT-PH-sd2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kd4-td-pCD"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YRi-2g-UN5"/>
+                                    <barButtonItem title="Open" width="79" id="NsP-j5-xAt">
+                                        <connections>
+                                            <action selector="openBtnPressed:" destination="fpZ-ka-xNF" id="5ZY-e2-oyW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="t3K-f7-zyS"/>
+                                    <barButtonItem enabled="NO" title="Process" width="79" id="UXn-YR-7U0">
+                                        <connections>
+                                            <action selector="processBtnPressed:" destination="fpZ-ka-xNF" id="pBc-J3-ECo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NYQ-sG-awA"/>
+                                    <barButtonItem enabled="NO" title="Save" width="79" id="DfP-Ws-h0X">
+                                        <connections>
+                                            <action selector="saveBtnPressed:" destination="fpZ-ka-xNF" id="eyH-M4-YoQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bb1-HH-OU0"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sherlock.png" translatesAutoresizingMaskIntoConstraints="NO" id="wDp-hb-1zF"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="0C8-35-rC2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QG4-8K-gXw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fpZ-ka-xNF" id="udj-Mz-6yD"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RfT-PH-sd2" firstAttribute="bottom" secondItem="Zvc-gg-6zV" secondAttribute="bottom" type="default" id="0gw-yJ-IMk"/>
+                            <constraint firstItem="RfT-PH-sd2" firstAttribute="trailing" secondItem="Zvc-gg-6zV" secondAttribute="trailing" type="default" id="9rL-fv-v5w"/>
+                            <constraint firstItem="wDp-hb-1zF" firstAttribute="trailing" secondItem="Zvc-gg-6zV" secondAttribute="trailing" type="default" id="GRq-KC-lQZ"/>
+                            <constraint firstItem="wDp-hb-1zF" firstAttribute="leading" secondItem="Zvc-gg-6zV" secondAttribute="leading" type="default" id="HoY-5f-bJR"/>
+                            <constraint firstItem="RfT-PH-sd2" firstAttribute="top" secondItem="wDp-hb-1zF" secondAttribute="bottom" type="default" id="IXV-Zz-8IW"/>
+                            <constraint firstItem="0C8-35-rC2" firstAttribute="trailing" secondItem="Zvc-gg-6zV" secondAttribute="trailing" type="default" id="dzZ-97-5dI"/>
+                            <constraint firstItem="RfT-PH-sd2" firstAttribute="leading" secondItem="Zvc-gg-6zV" secondAttribute="leading" type="default" id="gRz-Hf-tL0"/>
+                            <constraint firstItem="0C8-35-rC2" firstAttribute="top" secondItem="Zvc-gg-6zV" secondAttribute="top" type="default" id="iXL-KR-zBT"/>
+                            <constraint firstItem="wDp-hb-1zF" firstAttribute="top" secondItem="Zvc-gg-6zV" secondAttribute="top" type="default" id="mhA-wA-UDs"/>
+                            <constraint firstItem="0C8-35-rC2" firstAttribute="leading" secondItem="Zvc-gg-6zV" secondAttribute="leading" type="default" id="zXd-Tu-AgW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo View" id="ECv-ZX-Cmh">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="C5q-Nr-zMp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adBanner" destination="0C8-35-rC2" id="b7U-Re-eIs"/>
+                        <outlet property="contentView" destination="Zvc-gg-6zV" id="8kh-dZ-8pC"/>
+                        <outlet property="photoView" destination="wDp-hb-1zF" id="qOg-iW-8bx"/>
+                        <outlet property="processBtn" destination="UXn-YR-7U0" id="r5X-zc-0yo"/>
+                        <outlet property="saveBtn" destination="DfP-Ws-h0X" id="9Zn-Dm-wzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgd-c6-Sfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="-270"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dark-eye.jpg" width="1440" height="900"/>
+        <image name="sherlock.png" width="640" height="960"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="vsMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/vsMainViewController.h"/>
+        </class>
+        <class className="vsNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/vsNavigationController.h"/>
+        </class>
+        <class className="vsPhotoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/vsPhotoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="adBanner" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="processBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="vsVideoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/vsVideoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="adBanner" candidateClass="ADBannerView"/>
+                <relationship kind="outlet" name="captureImgViewer" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="modeSelector" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

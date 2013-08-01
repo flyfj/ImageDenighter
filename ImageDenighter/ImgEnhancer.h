@@ -20,7 +20,7 @@ class ImgEnhancer
 private:
 	
 	// params
-	int c[3];
+	int c[3];	// Guassian kernel scale
 	float alpha;
 	float beta;
 	float G;
@@ -39,13 +39,13 @@ private:
 
 	bool GenerateGaussianKernels(int imgw, int imgh);
 
+	
 
 public:
 	ImgEnhancer(void);
-	~ImgEnhancer(void);
 
-    bool ifInit;
-    
+	bool ifInit;
+
 	bool Init(const Mat& img);
 
 	bool MSRCR(const Mat& img, Mat& output);

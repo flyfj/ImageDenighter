@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 #import <opencv2/highgui/cap_ios.h>
+#import <opencv2/highgui/ios.h>
 #include "ImgEnhancer.h"
 using namespace cv;
 
-@interface vsViewController : UIViewController <CvVideoCameraDelegate, UINavigationBarDelegate>
+@interface vsVideoViewController : UIViewController <CvVideoCameraDelegate, UINavigationBarDelegate, ADBannerViewDelegate>
 {
      ImgEnhancer denighter;
 }
@@ -19,9 +21,9 @@ using namespace cv;
 
 @property (nonatomic, retain) CvVideoCamera *videoCamera;
 @property (weak, nonatomic) IBOutlet UIImageView *captureImgViewer;
-@property (weak, nonatomic) IBOutlet UISwitch *videoSwitcher;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *modeSelector;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveBtn;
+@property (weak, nonatomic) IBOutlet ADBannerView *adBanner;
 
-- (IBAction)videoSwitchChanged:(id)sender;
 
 @end
