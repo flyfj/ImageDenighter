@@ -6,7 +6,6 @@ Refer to itunes [page](https://itunes.apple.com/us/app/dark-retinex/id687641109?
 The app was built without adding autolayout and tuned for iPhone5. Currently no plan to add support for other models.
 
 # License
----
 The MIT License (MIT)
 
 Copyright (c) [2015] [Jie Feng]
